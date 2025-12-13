@@ -735,6 +735,157 @@ body.lang-hi .lang-en {
   cursor: pointer;
 }
 
+/* --- Timeline Section --- */
+.timeline-container {
+    position: relative;
+    max-width: 850px; /* A bit wider */
+    margin: 50px auto 0;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px; /* Thicker line */
+    /* Gradient line */
+    background: linear-gradient(to bottom, var(--accent-color), var(--primary-color), var(--secondary-color));
+    top: 10px;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    z-index: 2;
+    transition: transform 0.4s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03); /* Hover effect */
+}
+
+
+/* The icon circle on the timeline */
+.timeline-item::after {
+    content: attr(data-icon);
+    position: absolute;
+    width: 44px; /* Larger circle */
+    height: 44px;
+    right: -22px; /* Position compensation */
+    background-color: var(--background-color);
+    border: 4px solid var(--white);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: var(--primary-dark);
+    transition: transform 0.4s ease;
+}
+
+.timeline-item:hover::after {
+    transform: rotate(360deg) scale(1.1); /* Fun rotate on hover */
+}
+
+
+/* Place the item to the left */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 80px; /* More space for the icon */
+    text-align: right;
+}
+
+/* Place the item to the right */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 80px; /* More space for the icon */
+}
+
+/* Arrow adjustments are no longer needed with this design, remove them for a cleaner look */
+.timeline-item::before {
+   display: none;
+}
+
+
+/* Fix the circle for right-sided items */
+.timeline-item:nth-child(even)::after {
+    left: -22px;
+}
+
+.timeline-content {
+    padding: 25px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 16px; /* More rounded */
+    box-shadow: var(--shadow-hover);
+    border-left: 5px solid; /* Add accent border */
+    transition: box-shadow 0.4s ease;
+}
+
+/* Alternate border colors */
+.timeline-item:nth-child(4n+1) > .timeline-content { border-color: var(--primary-color); }
+.timeline-item:nth-child(4n+2) > .timeline-content { border-color: var(--secondary-color); }
+.timeline-item:nth-child(4n+3) > .timeline-content { border-color: var(--primary-green); }
+.timeline-item:nth-child(4n+4) > .timeline-content { border-color: var(--harvest-gold); }
+
+
+.timeline-item:nth-child(odd) > .timeline-content {
+    border-right: 5px solid;
+    border-left: none;
+}
+
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: var(--primary-dark); /* Darker heading */
+}
+
+.timeline-year {
+    font-size: 1.2rem; /* Smaller year */
+    font-weight: 700;
+    color: var(--text-light); /* Lighter year color */
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Media Queries for Timeline */
+@media screen and (max-width: 768px) {
+    .timeline-container::after {
+        left: 22px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 15px;
+    }
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-item:hover {
+        transform: none; /* Disable hover scale on mobile for better performance */
+    }
+    .timeline-item::after, .timeline-item:nth-child(even)::after {
+        left: 0;
+    }
+    .timeline-item:nth-child(odd) > .timeline-content {
+        border-right: none;
+        border-left: 5px solid;
+    }
+}
+
 .map-container {
   border-radius: 24px;
   overflow: hidden;
