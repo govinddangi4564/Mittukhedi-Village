@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mittukhedi - The Soul of Rural India</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;600&family=Noto+Sans+Devanagari:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Icons (using simple unicode or reliable CDN if allowed, sticking to unicode/css shapes for pure dependency-free) -->
+</head>
+
+<body class="lang-en">
+
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="lang-en">Mittukhedi</span>
+                <span class="lang-hi">मिट्टूखेड़ी</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about"><span class="lang-en">About</span><span class="lang-hi">परिचय</span></a></li>
+                    <li><a href="#life"><span class="lang-en">Village Life</span><span class="lang-hi">गाँव का
+                                जीवन</span></a></li>
+                    <li><a href="#infra"><span class="lang-en">Development</span><span class="lang-hi">विकास</span></a>
+                    </li>
+                    <li><a href="#culture"><span class="lang-en">Culture</span><span class="lang-hi">संस्कृति</span></a>
+                    </li>
+                    <li><a href="#how-to-reach"><span class="lang-en">How to Reach</span><span class="lang-hi">कैसे
+                                पहुँचें</span></a></li>
+                    <li><a href="#governance"><span class="lang-en">Panchayat</span><span
+                                class="lang-hi">पंचायत</span></a></li>
+                </ul>
+                <button id="lang-toggle" class="btn-toggle">
+                    <span class="lang-en">हिंदी</span>
+                    <span class="lang-hi">English</span>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-content container">
+            <div class="hero-text">
+                <span class="subtitle lang-en">Welcome to</span><span class="subtitle lang-hi">स्वागत है</span>
+                <h1 class="lang-en">Village Mittukhedi</h1>
+                <h1 class="lang-hi">ग्राम मिट्टूखेड़ी</h1>
+                <p class="lang-en">A timeless journey into the heart of rural Madhya Pradesh. Where tradition meets
+                    simplicity, and community equals family.</p>
+                <p class="lang-hi">मध्य प्रदेश के ग्रामीण अंचल की एक कालातीत यात्रा। जहाँ परंपरा सादगी से मिलती है, और
+                    समुदाय परिवार के समान है।</p>
+                <a href="#about" class="btn-primary ripple">
+                    <span class="lang-en">Discover Our Story</span>
+                    <span class="lang-hi">हमारी कहानी जानें</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Administrative Strip (Floating) -->
+    <div class="admin-strip container">
+        <div class="admin-grid">
+            <div class="admin-item">
+                <small class="lang-en">Village</small><small class="lang-hi">ग्राम</small>
+                <strong>Mittukhedi / मिट्टूखेड़ी</strong>
+            </div>
+            <div class="admin-item">
+                <small class="lang-en">Post</small><small class="lang-hi">पोस्ट</small>
+                <strong>Chatukheda / चाटूखेड़ा</strong>
+            </div>
+            <div class="admin-item">
+                <small class="lang-en">Panchayat</small><small class="lang-hi">पंचायत</small>
+                <strong>Rampuriya / रामपुरिया</strong>
+            </div>
+            <div class="admin-item">
+                <small class="lang-en">Tehsil</small><small class="lang-hi">तहसील</small>
+                <strong>Khujner / खुजनेर</strong>
+            </div>
+            <div class="admin-item">
+                <small class="lang-en">District</small><small class="lang-hi">जिला</small>
+                <strong>Rajgarh / राजगढ़</strong>
+            </div>
+            <div class="admin-item">
+                <small class="lang-en">State</small><small class="lang-hi">राज्य</small>
+                <strong>M.P. (India) / म.प्र.</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- About & History Deep Dive -->
+    <section id="about" class="section-padding">
+        <div class="container layout-grid">
+            <div class="content-text" data-animation="slide-in-left">
+                <span class="section-tag lang-en">History & Identity</span><span class="section-tag lang-hi">इतिहास और
+                    पहचान</span>
+                <h2 class="lang-en">The Legend of Mittukhedi</h2>
+                <h2 class="lang-hi">मिट्टूखेड़ी की गाथा</h2>
+                <p class="lang-en">
+                    The name <strong>"Mittukhedi"</strong> is deeply rooted in the ethos of the Malwa region. Elders
+                    believe it signifies a settlement ("Khedi") bonded by the soil ("Mitti").
+                    Established over a century ago by hardworking farming families, the village has transformed from a
+                    small hamlet into a thriving rural community.
+                    It sits proudly in the Rajgarh district, a region known for its historical significance and brave
+                    rulers.
+                    The village ethos is built on the principle of <em>"Vasudhaiva Kutumbakam"</em> (The World is One
+                    Family), where every resident is kin.
+                </p>
+                <p class="lang-hi">
+                    <strong>"मिट्टूखेड़ी"</strong> नाम मालवा क्षेत्र के लोकाचार में गहरा रचा-बसा है। बुजुर्गों का मानना
+                    है कि यह मिट्टी ("मिट्टी") से जुड़ी एक बस्ती ("खेड़ी") का प्रतीक है।
+                    एक सदी से भी पहले मेहनती किसान परिवारों द्वारा स्थापित, यह गाँव एक छोटी सी बस्ती से एक समृद्ध
+                    ग्रामीण समुदाय में बदल गया है।
+                    यह राजगढ़ जिले में गर्व से स्थित है, जो अपने ऐतिहासिक महत्व और बहादुर शासकों के लिए जाना जाता है।
+                    गाँव का लोकाचार <em>"वसुधैव कुटुम्बकम"</em> (विश्व एक परिवार है) के सिद्धांत पर बना है, जहाँ हर
+                    निवासी एक परिजन है।
+                </p>
+
+                <h3 class="lang-en">Geographical Layout</h3>
+                <h3 class="lang-hi">भौगोलिक विन्यास</h3>
+                <p class="lang-en">
+                    Mittukhedi is planned with practical wisdom. The main road acts as the spine, with smaller "Galis"
+                    (streets) branching out like veins.
+                    The center of the village, the <strong>Chowk</strong>, is defined by an ancient Neem tree and a
+                    raised platform where important discussions happen.
+                    Houses are clustered to ensure security and social bonding. The 'Kutcha' houses keep the interiors
+                    cool during the scorching Madhya Pradesh summers, while newer double-story 'Pucca' houses feature
+                    vibrant colors, showcasing the prosperity brought by modern agriculture.
+                </p>
+                <p class="lang-hi">
+                    मिट्टूखेड़ी को व्यावहारिक ज्ञान के साथ नियोजित किया गया है। मुख्य सड़क रीढ़ की हड्डी के रूप में
+                    कार्य करती है, जिसमें छोटी "गलियाँ" नसों की तरह निकलती हैं।
+                    गाँव का केंद्र, <strong>चौक</strong>, एक प्राचीन नीम के पेड़ और एक ऊंचे चबूतरे से परिभाषित होता है
+                    जहाँ महत्वपूर्ण चर्चाएँ होती हैं।
+                    सुरक्षा और सामाजिक जुड़ाव सुनिश्चित करने के लिए घर समूहों में बने हैं। 'कच्चे' घर भीषण गर्मी के
+                    दौरान अंदरूनी हिस्से को ठंडा रखते हैं, जबकि नए दो मंजिला 'पक्के' घरों में जीवंत रंग होते हैं, जो
+                    आधुनिक कृषि द्वारा लाई गई समृद्धि को प्रदर्शित करते हैं।
+                </p>
+            </div>
+            <div class="content-image-wrapper" data-animation="slide-in-right">
+                <img src="images/Layout.png" alt="Village Temple" class="rounded-shadow">
+                <div class="image-caption lang-en">The spiritual heart of our village.</div>
+                <div class="image-caption lang-hi">हमारे गाँव का आध्यात्मिक केंद्र।</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Life & Agriculture Deep Dive -->
+    <section id="life" class="section-padding bg-warm">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Agrarian Lifestyle</span><span class="section-tag lang-hi">कृषि जीवन
+                    शैली</span>
+                <h2 class="lang-en">The Cycle of Life & Soil</h2>
+                <h2 class="lang-hi">जीवन और मिट्टी का चक्र</h2>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Detailed Agriculture Section -->
+            <div class="long-read-content" data-animation="slide-in-up">
+                <h3 class="lang-en text-center">Agriculture: The Soul of Mittukhedi</h3>
+                <h3 class="lang-hi text-center">कृषि: मिट्टूखेड़ी की आत्मा</h3>
+                <p class="lang-en text-center max-800">
+                    Agriculture is not just a profession here; it is a devotion. The farmers of Mittukhedi are experts
+                    in cultivating the 'Black Cotton Soil' characteristic of the Malwa plateau.
+                </p>
+                <p class="lang-hi text-center max-800">
+                    कृषि यहाँ सिर्फ एक पेशा नहीं है; यह एक साधना है। मिट्टूखेड़ी के किसान मालवा के पठार की विशेषता 'काली
+                    कपास मिट्टी' की खेती करने में विशेषज्ञ हैं।
+                </p>
+
+                <div class="card-grid" data-stagger-children="true">
+                    <div class="feature-card" data-animation="zoom-in">
+                        <div class="icon">🌦️</div>
+                        <h4 class="lang-en">Kharif Season (Monsoon)</h4>
+                        <h4 class="lang-hi">खरीफ का मौसम (मानसून)</h4>
+                        <p class="lang-en">
+                            With the first rains of June/July, the sowing of <strong>Soybean</strong> and Maize begins.
+                            The entire village turns green. This is a time of hope and hard labor as farmers protect
+                            crops from pests and weeds.
+                        </p>
+                        <p class="lang-hi">
+                            जून/जुलाई की पहली बारिश के साथ ही <strong>सोयाबीन</strong> और मक्का की बुवाई शुरू हो जाती
+                            है। पूरा गाँव हरा-भरा हो जाता है। यह आशा और कड़ी मेहनत का समय है क्योंकि किसान कीटों और
+                            खरपतवार से फसलों की रक्षा करते हैं।
+                        </p>
+                    </div>
+                    <div class="feature-card" data-animation="zoom-in">
+                        <div class="icon">❄️</div>
+                        <h4 class="lang-en">Rabi Season (Winter)</h4>
+                        <h4 class="lang-hi">रबी का मौसम (सर्दी)</h4>
+                        <p class="lang-en">
+                            As winter sets in, the fields turn into oceans of gold with <strong>Wheat
+                                (Sharbati)</strong> and Gram (Chana). Irrigation from tube wells and the village pond
+                            plays a crucial role during this dry season.
+                        </p>
+                        <p class="lang-hi">
+                            जैसे ही सर्दी शुरू होती है, खेत <strong>गेहूं (शरबती)</strong> और चना (चना) के साथ सोने के
+                            सागर में बदल जाते हैं। इस शुष्क मौसम के दौरान नलकूपों और गाँव के तालाब से सिंचाई एक
+                            महत्वपूर्ण भूमिका निभाती है।
+                        </p>
+                    </div>
+                    <div class="feature-card" data-animation="zoom-in">
+                        <div class="icon">🥛</div>
+                        <h4 class="lang-en">Animal Husbandry</h4>
+                        <h4 class="lang-hi">पशुपालन</h4>
+                        <p class="lang-en">
+                            Almost every household rears Buffaloes (Murrah breed) and Cows. Milk production is a vital
+                            secondary income, with fresh milk supplied to local cooperative societies daily at dawn and
+                            dusk.
+                        </p>
+                        <p class="lang-hi">
+                            लगभग हर घर में भैंस (मुर्रा नस्ल) और गाय पाली जाती हैं। दूध उत्पादन एक महत्वपूर्ण माध्यमिक
+                            आय है, जिसमें ताजा दूध प्रतिदिन सुबह और शाम स्थानीय सहकारी समितियों को दिया जाता है।
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer-50"></div>
+
+            <!-- Daily Routine Section -->
+            <div class="layout-grid">
+                <div class="content-text" data-animation="slide-in-right">
+                    <h3 class="lang-en">A Day in the Life</h3>
+                    <h3 class="lang-hi">जीवन का एक दिन</h3>
+                    <p class="lang-en">
+                        <strong>4:00 AM (Brahma Muhurta):</strong> The village wakes up. Elders visit the temple for
+                        chanting. Women begin cleaning the 'Aangan' (courtyard) and milking cattle.
+                    </p>
+                    <p class="lang-hi">
+                        <strong>सुबह 4:00 बजे (ब्रह्म मुहूर्त):</strong> गाँव जाग जाता है। बुजुर्ग भजन के लिए मंदिर जाते
+                        हैं। महिलाएं 'आंगन' की सफाई और मवेशियों का दूध दुहना शुरू करती हैं।
+                    </p>
+                    <p class="lang-en">
+                        <strong>Noon:</strong> As men work in the fields, the village streets are quiet, save for
+                        children returning from school. The smell of 'Chulha' (earthen stove) cooking permeates the air.
+                    </p>
+                    <p class="lang-hi">
+                        <strong>दोपहर:</strong> जब पुरुष खेतों में काम करते हैं, तो गाँव की गलियाँ शांत रहती हैं, केवल
+                        स्कूल से लौटने वाले बच्चों को छोड़कर। 'चूल्हे' (मिट्टी के चूल्हे) पर खाना पकाने की महक हवा में
+                        फैल जाती है।
+                    </p>
+                    <p class="lang-en">
+                        <strong>Evening (Godhuli Vela):</strong> As cattle return home, raising dust in the golden
+                        sunset light, the village gathers. Elders sit on the 'Ootlas', discussing news, crops, and
+                        family matters.
+                    </p>
+                    <p class="lang-hi">
+                        <strong>शाम (गोधूलि वेला):</strong> जैसे ही मवेशी घर लौटते हैं, सुनहरे सूर्यास्त की रोशनी में
+                        धूल उड़ाते हुए, गाँव इकट्ठा होता है। बुजुर्ग 'ओटले' पर बैठते हैं, समाचार, फसलों और पारिवारिक
+                        मामलों पर चर्चा करते हैं।
+                    </p>
+                </div>
+                <div class="content-image-wrapper" data-animation="slide-in-left">
+                    <!-- Using Fields image to represent work -->
+                    <img src="images/Navratri.jpg" alt="Village Life" class="rounded-shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Deep Dive -->
+    <section id="infra" class="section-padding">
+        <div class="container layout-grid reverse">
+            <div class="content-text" data-animation="slide-in-right">
+                <span class="section-tag lang-en">Modern Connectivity</span><span class="section-tag lang-hi">आधुनिक
+                    कनेक्टिविटी</span>
+                <h2 class="lang-en">Bridging the Gap</h2>
+                <h2 class="lang-hi">दूरी को पाटना</h2>
+                <p class="lang-en">
+                    While Mittukhedi retains its old-world charm, it is not left behind in development. Under the
+                    stewardship of the Rampuriya Panchayat, infrastructure has seen a massive overhaul.
+                </p>
+                <p class="lang-hi">
+                    जबकि मिट्टूखेड़ी अपने पुरानी दुनिया के आकर्षण को बरकरार रखता है, यह विकास में पीछे नहीं है।
+                    रामपुरिया पंचायत के नेतृत्व में, बुनियादी ढांचे में भारी बदलाव देखा गया है।
+                </p>
+
+                <ul class="detail-list expanded" data-stagger-children="true">
+                    <li data-animation="slide-in-right">
+                        <strong><span class="lang-en">Road Network:</span><span class="lang-hi">सड़क
+                                नेटवर्क:</span></strong>
+                        <span class="lang-en">Pradhan Mantri Gram Sadak Yojana (PMGSY) has ensured tar roads connect the
+                            village to the tehsil HQ at Khujner. Unlike the muddy paths of the past, internal lanes are
+                            now paved with CC (Cement Concrete), ensuring cleanliness even in monsoons.</span>
+                        <span class="lang-hi">प्रधानमंत्री ग्राम सड़क योजना (PMGSY) ने सुनिश्चित किया है कि पक्की सड़कें
+                            गाँव को खुजनेर स्थित तहसील मुख्यालय से जोड़ती हैं। अतीत के कीचड़ वाले रास्तों के विपरीत,
+                            आंतरिक गलियाँ अब CC (सीमेंट कंक्रीट) से पक्की हैं, जो मानसून में भी सफाई सुनिश्चित करती
+                            हैं।</span>
+                    </li>
+                    <li data-animation="slide-in-right">
+                        <strong><span class="lang-en">Digital India:</span><span class="lang-hi">डिजिटल
+                                इंडिया:</span></strong>
+                        <span class="lang-en">The village boasts high-speed 4G connectivity. A Common Service Centre
+                            (CSC) operates nearby, allowing farmers to print land records (Khasra/Khatauni) and apply
+                            for government schemes online without travelling to the city.</span>
+                        <span class="lang-hi">गाँव में हाई-स्पीड 4G कनेक्टिविटी है। पास में एक कॉमन सर्विस सेंटर (CSC)
+                            संचालित होता है, जिससे किसान भूमि रिकॉर्ड (खसरा/खतौनी) प्रिंट कर सकते हैं और शहर की यात्रा
+                            किए बिना सरकारी योजनाओं के लिए ऑनलाइन आवेदन कर सकते हैं।</span>
+                    </li>
+                    <li data-animation="slide-in-right">
+                        <strong><span class="lang-en">Water & Power:</span><span class="lang-hi">जल और
+                                बिजली:</span></strong>
+                        <span class="lang-en">Under the 'Nal Jal Yojana', piped drinking water reaches households.
+                            Electricity supply has improved significantly, with dedicated agricultural feeders ensuring
+                            farmers get power for irrigation during critical hours.</span>
+                        <span class="lang-hi">'नल जल योजना' के तहत, पाइप से पीने का पानी घरों तक पहुँचता है। बिजली
+                            आपूर्ति में काफी सुधार हुआ है, समर्पित कृषि फीडर यह सुनिश्चित करते हैं कि किसानों को
+                            महत्वपूर्ण घंटों के दौरान सिंचाई के लिए बिजली मिले।</span>
+                    </li>
+                    <li data-animation="slide-in-right">
+                        <strong><span class="lang-en">Economy & Banking:</span><span class="lang-hi">अर्थव्यवस्था और
+                                बैंकिंग:</span></strong>
+                        <span class="lang-en">Though there is no large bank branch inside the village, Business
+                            Correspondents (Bank Mitras) visit regularly with micro-ATM devices, enabling cash
+                            withdrawals for pensioners and MNREGA workers at their doorstep.</span>
+                        <span class="lang-hi">हालांकि गाँव के अंदर कोई बड़ी बैंक शाखा नहीं है, लेकिन बिजनेस
+                            कॉरेस्पोंडेंट (बैंक मित्र) नियमित रूप से माइक्रो-एटीएम उपकरणों के साथ आते हैं, जिससे
+                            पेंशनभोगियों और मनरेगा श्रमिकों के लिए उनके घर पर ही नकद निकासी संभव हो पाती है।</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-image-wrapper" data-animation="slide-in-left">
+                <img src="images/Road.png" alt="Infrastructure" class="rounded-shadow">
+            </div>
+        </div>
+    </section>
+
+    <!-- Nature & Environment Deep Dive -->
+    <section id="nature" class="section-padding bg-green-gradient text-white">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <h2 class="lang-en">Guardians of Nature</h2>
+                <h2 class="lang-hi">प्रकृति के संरक्षक</h2>
+                <div class="divider white"></div>
+            </div>
+            <div class="long-text-block text-center" data-animation="zoom-in">
+                <p class="lang-en">
+                    The environment of Mittukhedi is a blend of agricultural landscapes and pockets of wilderness. The
+                    air is crisp, free from industrial pollution.
+                    The mornings are filled with the chirping of Sparrows (Goraiya) and Peacocks, which are often seen
+                    dancing in the fields during the rainy season.
+                    <strong>Trees:</strong> Ancient Banyan (Bargad) and Peepal trees act as natural air purifiers and
+                    resting spots for travelers. Neem trees line the boundaries of homes, providing medicinal benefits.
+                </p>
+                <p class="lang-hi">
+                    मिट्टूखेड़ी का वातावरण कृषि परिदृश्य और जंगल के हिस्सों का मिश्रण है। हवा ताजा है, औद्योगिक प्रदूषण
+                    से मुक्त है।
+                    सुबह गौरैया और मोरों की चहचहाहट से भरी होती है, जिन्हें अक्सर बरसात के मौसम में खेतों में नाचते हुए
+                    देखा जाता है।
+                    <strong>पेड़:</strong> प्राचीन बरगद और पीपल के पेड़ प्राकृतिक वायु शोधक और यात्रियों के लिए विश्राम
+                    स्थल के रूप में कार्य करते हैं। नीम के पेड़ घरों की सीमाओं पर लगे हैं, जो औषधीय लाभ प्रदान करते हैं।
+                </p>
+            </div>
+
+            <div class="nature-grid" data-stagger-children="true">
+                <div class="nature-item" data-animation="zoom-in">
+                    <h3 class="lang-en">The Village Pond (Talab)</h3>
+                    <h3 class="lang-hi">गाँव का तालाब</h3>
+                    <p class="lang-en">More than just a water body, the Talab is a community hub. It recharges the
+                        groundwater levels for nearby wells and serves cattle. Every monsoon, the village unites to
+                        clean its catchment area.</p>
+                    <p class="lang-hi">सिर्फ एक जल निकाय से अधिक, तालाब एक सामुदायिक केंद्र है। यह पास के कुओं के लिए
+                        भूजल स्तर को रिचार्ज करता है और मवेशियों की सेवा करता है। हर मानसून में, गाँव इसके जलग्रहण
+                        क्षेत्र को साफ करने के लिए एकजुट होता है।</p>
+                </div>
+                <div class="nature-item" data-animation="zoom-in">
+                    <h3 class="lang-en">Seasonal Biodiversity</h3>
+                    <h3 class="lang-hi">मौसमी जैव विविधता</h3>
+                    <p class="lang-en">From the golden hue of Amaltas flowers in summer to the lush green carpet in
+                        monsoon, the village changes colors with seasons, reminding us of nature's cyclicity.</p>
+                    <p class="lang-hi">गर्मियों में अमलतास के फूलों की सुनहरी आभा से लेकर मानसून में हरे-भरे कालीन तक,
+                        गाँव मौसम के साथ रंग बदलता है, जो हमें प्रकृति की चक्रीयता की याद दिलाता है।</p>
+                </div>
+                <div class="nature-item" data-animation="zoom-in">
+                    <h3 class="lang-en">Swachhata (Cleanliness)</h3>
+                    <h3 class="lang-hi">स्वच्छता</h3>
+                    <p class="lang-en">Inspired by national missions, the village has adopted 'Soak Pits' for wastewater
+                        management and segregation of waste, moving towards a 'Nirmal Gram' status.</p>
+                    <p class="lang-hi">राष्ट्रीय मिशनों से प्रेरित होकर, गाँव ने अपशिष्ट जल प्रबंधन और कचरे को अलग करने
+                        के लिए 'सोक पिट्स' (सोख्ता गड्ढे) अपनाए हैं, जो 'निर्मल ग्राम' की स्थिति की ओर बढ़ रहे हैं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Health -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <div class="grid-2" data-stagger-children="true">
+                <div class="service-block" data-animation="slide-in-up">
+                    <span class="icon-large">🎓</span>
+                    <h2 class="lang-en">Education & Youth</h2>
+                    <h2 class="lang-hi">शिक्षा और युवा</h2>
+                    <p class="lang-en">
+                        Education is a priority. The local **Anganwadi** nurtures toddlers, while the Primary and Middle
+                        schools lay the foundation.
+                        Youth aspire for higher education in nearby towns, aiming for government jobs and army service
+                        to serve the nation.
+                        Playgrounds buzz with cricket and kabaddi in the evenings.
+                    </p>
+                    <p class="lang-hi">
+                        शिक्षा एक प्राथमिकता है। स्थानीय **आंगनवाड़ी** बच्चों का पालन-पोषण करती है, जबकि प्राथमिक और
+                        मध्य विद्यालय नींव रखते हैं।
+                        युवा पास के शहरों में उच्च शिक्षा की आकांक्षा रखते हैं, सरकारी नौकरियों और सेना में सेवा करने का
+                        लक्ष्य रखते हैं।
+                        शाम को खेल के मैदान क्रिकेट और कबड्डी से गुंजायमान रहते हैं।
+                    </p>
+                </div>
+                <div class="service-block" data-animation="slide-in-up">
+                    <span class="icon-large">🏥</span>
+                    <h2 class="lang-en">Health & Welfare</h2>
+                    <h2 class="lang-hi">स्वास्थ्य और कल्याण</h2>
+                    <p class="lang-en">
+                        **ASHA Workers** are the frontline warriors, ensuring vaccination and maternal care. Cleanliness
+                        drives under Swachh Bharat have led to 100% toilet usage.
+                        Regular health camps and emergency support systems ensure the well-being of every elder and
+                        child.
+                    </p>
+                    <p class="lang-hi">
+                        **आशा कार्यकर्ता** अग्रिम पंक्ति की योद्धा हैं, जो टीकाकरण और मातृ देखभाल सुनिश्चित करती हैं।
+                        स्वच्छ भारत के तहत सफाई अभियान से 100% शौचालय उपयोग हुआ है।
+                        नियमित स्वास्थ्य शिविर और आपातकालीन सहायता प्रणालियाँ हर बुजुर्ग और बच्चे की भलाई सुनिश्चित करती
+                        हैं।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture & Traditions -->
+    <section id="culture" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Heritage</span><span class="section-tag lang-hi">विरासत</span>
+                <h2 class="lang-en">Culture & Traditions</h2>
+                <h2 class="lang-hi">संस्कृति और परंपराएं</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="culture-showcase">
+                <div class="culture-text" data-animation="slide-in-left">
+                    <p class="lang-en">
+                        Mittukhedi celebrates life. Festivals like **Diwali, Holi, and Raksha Bandhan** bring the entire
+                        village together as one family.
+                        <strong>Fairs (Melas)</strong> are colorful events where traditional wares are sold.
+                        <strong>Folk Songs</strong> echo during weddings, and the cuisine is simple yet divine—'Dal
+                        Bafla' and 'Makki ki Roti' being local favorites.
+                    </p>
+                    <p class="lang-hi">
+                        मिट्टूखेड़ी जीवन का उत्सव मनाता है। **दिवाली, होली और रक्षाबंधन** जैसे त्यौहार पूरे गाँव को एक
+                        परिवार के रूप में एक साथ लाते हैं।
+                        <strong>मेले</strong> रंगीन कार्यक्रम होते हैं जहाँ पारंपरिक सामान बेचे जाते हैं।
+                        शादियों के दौरान <strong>लोक गीत</strong> गूँजते हैं, और भोजन सरल लेकिन दिव्य होता है—'दाल
+                        बाफला' और 'मक्का की रोटी' स्थानीय पसंदीदा हैं।
+                    </p>
+                </div>
+                <div class="gallery-preview" data-animation="slide-in-right">
+                    <!-- Using the Fields image as placeholder for culture/land vibe -->
+                    <img src="images/Divali.jpg" alt="Culture" class="rounded-shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance Deep Dive -->
+    <section id="governance" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Administration</span><span class="section-tag lang-hi">प्रशासन</span>
+                <h2 class="lang-en">Governance & Panchayat</h2>
+                <h2 class="lang-hi">शासन और पंचायत</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="layout-grid" data-animation="zoom-in">
+                <div class="content-text full-width">
+                    <p class="lang-en">
+                        Mittukhedi falls under the jurisdiction of the <strong>Rampuriya Gram Panchayat</strong>. The
+                        governance model is participatory and transparent.
+                        Elections specifically for the 'Sarpanch' and 'Panchs' are held every 5 years, celebrating the
+                        festival of democracy.
+                    </p>
+                    <p class="lang-hi">
+                        मिट्टूखेड़ी <strong>रामपुरिया ग्राम पंचायत</strong> के अधिकार क्षेत्र में आता है। शासन मॉडल
+                        भागीदारीपूर्ण और पारदर्शी है।
+                        विशेष रूप से 'सरपंच' और 'पंच' के लिए चुनाव हर 5 साल में होते हैं, जो लोकतंत्र का उत्सव मनाते
+                        हैं।
+                    </p>
+
+                    <h3 class="lang-en">The Gram Sabha</h3>
+                    <h3 class="lang-hi">ग्राम सभा</h3>
+                    <p class="lang-en">
+                        The heartbeat of local democracy is the 'Gram Sabha' meeting. Held on key dates like Republic
+                        Day and Independence Day, villagers gather to audit the work done.
+                        Disputes are often resolved amicam bly by elders, reducing the burden on courts.
+                    </p>
+                    <p class="lang-hi">
+                        स्थानीय लोकतंत्र की धड़कन 'ग्राम सभा' की बैठक है। गणतंत्र दिवस और स्वतंत्रता दिवस जैसी प्रमुख
+                        तारीखों पर आयोजित, ग्रामीण किए गए कार्यों का ऑडिट करने के लिए इकट्ठा होते हैं।
+                        विवादों को अक्सर बुजुर्गों द्वारा सौहार्दपूर्ण ढंग से सुलझाया जाता है, जिससे अदालतों पर बोझ कम
+                        होता है।
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spiritual & Cultural Life (Specifics) -->
+    <section id="spiritual" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Devotion</span><span class="section-tag lang-hi">भक्ति</span>
+                <h2 class="lang-en">Faith & Spirit: The Heart of the Village</h2>
+                <h2 class="lang-hi">आस्था और आत्मा: गाँव का हृदय</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="layout-grid">
+                <div class="content-text" data-animation="slide-in-left">
+                    <h3 class="lang-en">Mandirs & Sundarkand</h3>
+                    <h3 class="lang-hi">मंदिर और सुंदरकांड</h3>
+                    <p class="lang-en">
+                        The spiritual vibration of Mittukhedi resonates from its temples. The <strong>Hanuman
+                            Mandir</strong> stands as a guardian, where devotees gather every Tuesday.
+                        The majestic <strong>Ram Mandir</strong> is the center of major celebrations.
+                        A unique tradition is the collective recitation of <strong>Sundarkand</strong>, where the air
+                        fills with the rhythm of 'Chaupais' and 'Dholak', binding the community in a thread of devotion.
+                    </p>
+                    <p class="lang-hi">
+                        मिट्टूखेड़ी का आध्यात्मिक कंपन इसके मंदिरों से गूंजता है। <strong>हनुमान मंदिर</strong> एक
+                        संरक्षक के रूप में खड़ा है, जहाँ हर मंगलवार को भक्त इकट्ठा होते हैं।
+                        भव्य <strong>राम मंदिर</strong> प्रमुख उत्सवों का केंद्र है।
+                        एक अनूठी परंपरा <strong>सुंदरकांड</strong> का सामूहिक पाठ है, जहाँ हवा 'चौपाइयों' और 'ढोलक' की
+                        लय से भर जाती है, जो समुदाय को भक्ति के धागे में बांधती है।
+                    </p>
+                </div>
+                <div class="content-image-wrapper" data-animation="slide-in-right">
+                    <img src="images/Ram Mandir.jpg" alt="Ram and Hanuman Mandir" class="rounded-shadow hover-zoom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economy & Assets (Specifics) -->
+    <section id="assets" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Prosperity</span><span class="section-tag lang-hi">समृद्धि</span>
+                <h2 class="lang-en">Assets of the Earth</h2>
+                <h2 class="lang-hi">धरती की संपत्ति</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="masonry-grid" data-stagger-children="true">
+                <!-- Item 1: Tractors -->
+                <div class="masonry-item" data-animation="zoom-in">
+                    <img src="images/Khet.png" alt="Tractor in Khet">
+                    <div class="masonry-content">
+                        <h4 class="lang-en">Modern Khet (Farming)</h4>
+                        <h4 class="lang-hi">आधुनिक खेती</h4>
+                        <p class="lang-en">The roar of <strong>Tractors</strong> in the fields symbolizes the shift to
+                            modern farming. They plough the rich soil of the 'Khet', preparing it for the season's gold.
+                        </p>
+                        <p class="lang-hi">खेतों में <strong>ट्रैक्टरों</strong> की गर्जना आधुनिक खेती की ओर बदलाव का
+                            प्रतीक है। वे 'खेत' की उपजाऊ मिट्टी को जोतते हैं, इसे मौसम के सोने (फसल) के लिए तैयार करते
+                            हैं।</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Buffaloes -->
+                <div class="masonry-item" data-animation="zoom-in">
+                    <img src="images/Buffalo and river.png" alt="Buffaloes and River">
+                    <div class="masonry-content">
+                        <h4 class="lang-en">Livestock & River</h4>
+                        <h4 class="lang-hi">पशुधन और नदी</h4>
+                        <p class="lang-en"><strong>Buffaloes</strong> are the prized wealth of every household. In the
+                            afternoons, they can be seen resting near the cool waters of the village river/pond.</p>
+                        <p class="lang-hi"><strong>भैंसें</strong> हर घर की अनमोल संपत्ति हैं। दोपहर में, उन्हें गाँव की
+                            नदी/तालाब के ठंडे पानी के पास आराम करते देखा जा सकता है।</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: School & Ground -->
+                <div class="masonry-item" data-animation="zoom-in">
+                    <!-- Reusing School Image or similar -->
+                    <img src="images/School.png" alt="School and Play Ground">
+                    <div class="masonry-content">
+                        <h4 class="lang-en">School & Playground</h4>
+                        <h4 class="lang-hi">स्कूल और खेल का मैदान</h4>
+                        <p class="lang-en">The <strong>Village School</strong> is the temple of learning, while the
+                            expansive **Ground** echoes with the energy of youth playing Cricket and Volleyball.</p>
+                        <p class="lang-hi"><strong>गाँव का स्कूल</strong> सीखने का मंदिर है, जबकि विशाल **मैदान**
+                            क्रिकेट और वॉलीबॉल खेलने वाले युवाओं की ऊर्जा से गूंजता है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social & Festivals (Specifics) -->
+    <section id="festivals" class="section-padding bg-warm">
+        <div class="container layout-grid">
+            <div class="content-image-wrapper" data-animation="slide-in-left">
+                <img src="images/Mariage.jpg" alt="Diwali and Marriage" class="rounded-shadow hover-zoom">
+            </div>
+            <div class="content-text" data-animation="slide-in-right">
+                <span class="section-tag lang-en">Celebration</span><span class="section-tag lang-hi">उत्सव</span>
+                <h2 class="lang-en">Colors of Joy: Diwali & Marriages</h2>
+                <h2 class="lang-hi">खुशी के रंग: दिवाली और शादियाँ</h2>
+                <p class="lang-en">
+                    <strong>Diwali</strong> in Mittukhedi is magical—thousands of earthen lamps (Diyas) light up every
+                    home and the temple steps.
+                    <strong>Marriage</strong> ceremonies are grand community events. The 'Baraat' processes through the
+                    village streets, and the entire village feasts together ('Pangat'), showcasing unity.
+                    Festivals are not just dates on a calendar; they are the heartbeat of our social existence.
+                </p>
+                <p class="lang-hi">
+                    मिट्टूखेड़ी में <strong>दिवाली</strong> जादुई होती है—हजारों मिट्टी के दीपक हर घर और मंदिर की
+                    सीढ़ियों को रोशन करते हैं।
+                    <strong>शादी</strong> समारोह भव्य सामुदायिक कार्यक्रम होते हैं। 'बारात' गाँव की सड़कों से गुजरती है,
+                    और पूरा गाँव एक साथ दावत ('पंगत') करता है, जो एकता को प्रदर्शित करता है।
+                    त्यौहार केवल कैलेंडर पर तारीखें नहीं हैं; वे हमारे सामाजिक अस्तित्व की धड़कन हैं।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Reach Section -->
+    <section id="how-to-reach" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Visit Us</span><span class="section-tag lang-hi">हमसे मिलें</span>
+                <h2 class="lang-en">How to Reach Mittukhedi</h2>
+                <h2 class="lang-hi">मिट्टूखेड़ी कैसे पहुँचें</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="layout-grid">
+                <div class="content-text" data-animation="slide-in-left">
+                    <p class="lang-en">
+                        Mittukhedi is well-connected by road and is accessible from major cities in Madhya Pradesh. Here
+                        are the details on how you can plan your visit.
+                    </p>
+                    <p class="lang-hi">
+                        मिट्टूखेड़ी सड़क मार्ग से अच्छी तरह जुड़ा हुआ है और मध्य प्रदेश के प्रमुख शहरों से यहाँ पहुँचा
+                        जा सकता है। यहां बताया गया है कि आप अपनी यात्रा की योजना कैसे बना सकते हैं।
+                    </p>
+                    <ul class="detail-list expanded" data-stagger-children="true">
+                        <li data-animation="slide-in-left">
+                            <strong><span class="lang-en">By Road:</span><span class="lang-hi">सड़क मार्ग
+                                    से:</span></strong>
+                            <span class="lang-en">The village is located near NH52. It is approximately 40 km from the
+                                district headquarters, Rajgarh. Regular bus services are available from Rajgarh and
+                                Bhopal to Khujner, the nearest town. From Khujner, local transport like autos and shared
+                                taxis are available.</span>
+                            <span class="lang-hi">गाँव NH52 के पास स्थित है। यह जिला मुख्यालय, राजगढ़ से लगभग 40 किमी
+                                दूर है। निकटतम शहर खुजनेर के लिए राजगढ़ और भोपाल से नियमित बस सेवाएं उपलब्ध हैं। खुजनेर
+                                से, ऑटो और शेयर्ड टैक्सी जैसे स्थानीय परिवहन उपलब्ध हैं।</span>
+                        </li>
+                        <li data-animation="slide-in-left">
+                            <strong><span class="lang-en">By Rail:</span><span class="lang-hi">रेल मार्ग
+                                    से:</span></strong>
+                            <span class="lang-en">The nearest major railway station is Pachor Road (PFR) or Biyavra
+                                Rajgarh (BRRG), approximately 50-60 km away. These stations are well-connected to major
+                                cities like Delhi, Mumbai, and Bhopal. From the station, one can hire a taxi to reach
+                                the village.</span>
+                            <span class="lang-hi">निकटतम प्रमुख रेलवे स्टेशन पचोर रोड (PFR) या ब्यावरा राजगढ़ (BRRG) है,
+                                जो लगभग 50-60 किमी दूर है। ये स्टेशन दिल्ली, मुंबई और भोपाल जैसे प्रमुख शहरों से अच्छी
+                                तरह से जुड़े हुए हैं। स्टेशन से, गाँव तक पहुँचने के लिए टैक्सी किराए पर ली जा सकती
+                                है।</span>
+                        </li>
+                        <li data-animation="slide-in-left">
+                            <strong><span class="lang-en">By Air:</span><span class="lang-hi">हवाई मार्ग
+                                    से:</span></strong>
+                            <span class="lang-en">The nearest airport is the Raja Bhoj Airport (BHO) in Bhopal, located
+                                about 125 km away. It is a domestic airport with good connectivity to major Indian
+                                cities. From the airport, taxis and bus services are available to reach Rajgarh and
+                                subsequently Mittukhedi.</span>
+                            <span class="lang-hi">निकटतम हवाई अड्डा भोपाल में राजा भोज हवाई अड्डा (BHO) है, जो लगभग 125
+                                किमी दूर स्थित है। यह एक घरेलू हवाई अड्डा है जिसकी प्रमुख भारतीय शहरों से अच्छी
+                                कनेक्टिविटी है। हवाई अड्डे से, राजगढ़ और बाद में मिट्टूखेड़ी पहुँचने के लिए टैक्सी और बस
+                                सेवाएँ उपलब्ध हैं।</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-image-wrapper" data-animation="slide-in-right">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58405.79645531392!2d76.5623281486328!3d23.89249969999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396494134bffffff%3A0xe542d96c39c2fc71!2sKhujner%2C%20Madhya%20Pradesh%20465687!5e0!3m2!1sen!2sin!4v1678886937389!5m2!1sen!2sin"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="image-caption lang-en">Map showing the region around Mittukhedi.</div>
+                    <div class="image-caption lang-hi">मिट्टूखेड़ी के आसपास के क्षेत्र को दर्शाता नक्शा।</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="photo-gallery" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-animation="slide-in-up">
+                <span class="section-tag lang-en">Memories</span><span class="section-tag lang-hi">यादें</span>
+                <h2 class="lang-en">Photo Gallery</h2>
+                <h2 class="lang-hi">फोटो गैलरी</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="swiper-container gallery-slider" data-animation="zoom-in">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/Divali.jpg" alt="Diwali celebrations in Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Hanuman Mandir.jpg" alt="Hanuman Mandir in Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Mariage.jpg" alt="A wedding ceremony in Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Navratri.jpg" alt="Navratri celebrations in Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo gallery 3.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo gallery 4.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo gallery 6.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo gallery 7.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Phtot gallery 1.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Phtoto gallery 2.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Phtoto gallery 5.jpg" alt="A photo from the gallery">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Ram Mandir.jpg" alt="Ram Mandir in Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo gallery 8.jpg" alt="Diwali celebrations in Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Tractor.jpg" alt="A tractor in the fields of Mittukhedi">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/Photo gallery 9.jpg" alt="Diwali celebrations in Mittukhedi">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Developer Section -->
+    <section id="developer" class="section-padding bg-warm">
+        <div class="container text-center">
+            <span class="section-tag lang-en" data-animation="slide-in-up">The Architect</span><span
+                class="section-tag lang-hi" data-animation="slide-in-up">शिल्पकार</span>
+            <h2 class="lang-en" data-animation="slide-in-up">Meet the Developer</h2>
+            <h2 class="lang-hi" data-animation="slide-in-up">डेवलपर से मिलें</h2>
+            <div class="developer-card" data-animation="zoom-in">
+                <img src="images/Developer.png" alt="Developer Photo" class="developer-photo">
+                <div class="developer-info">
+                    <h3 class="developer-name">Govind Dangi</h3>
+                    <p class="developer-bio">A passionate developer with roots in Mittukhedi, currently honing skills in
+                        web development and bringing digital dreams to life. This project is a tribute to the village's
+                        spirit.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/govind-dangi-57579b339" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/govinddangi4564" target="_blank">GitHub</a>
+                        <a href="mailto:govinddangi580@gmail.com" target="_blank">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Expanded) -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="lang-en">Village Mittukhedi</h3>
+                <h3 class="lang-hi">ग्राम मिट्टूखेड़ी</h3>
+                <p>Pin Code: 465683 (approx region)</p>
+                <p>Post: Chatukheda</p>
+                <p>Panchayat: Rampuriya</p>
+                <p>Tehsil: Khujner</p>
+                <p>Dist: Rajgarh, M.P.</p>
+            </div>
+            <div class="footer-col">
+                <h3 class="lang-en">Quick Links</h3>
+                <h3 class="lang-hi">त्वरित लिंक</h3>
+                <a href="#about"><span class="lang-en">About</span><span class="lang-hi">परिचय</span></a>
+                <a href="#infra"><span class="lang-en">Development</span><span class="lang-hi">विकास</span></a>
+                <a href="#governance"><span class="lang-en">Panchayat</span><span class="lang-hi">पंचायत</span></a>
+            </div>
+            <div class="footer-col">
+                <h3 class="lang-en">Useful Links</h3>
+                <h3 class="lang-hi">उपयोगी लिंक</h3>
+                <ul>
+                    <li><a href="https://rajgarh.nic.in/" target="_blank">District Rajgarh Official</a></li>
+                    <li><a href="https://mp.gov.in/" target="_blank">MP Govt Portal</a></li>
+                    <li><a href="https://pmaymis.gov.in/" target="_blank">PM Awas Yojana</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="lang-en">Follow Us</h3>
+                <h3 class="lang-hi">हमें फॉलो करें</h3>
+                <div class="social-links-footer">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3 class="lang-en">Contact/Emergency</h3>
+                <h3 class="lang-hi">संपर्क/आपातकालीन</h3>
+                <p>Sarpanch Office: Rampuriya</p>
+                <p>Police Station: Khujner</p>
+                <p>Hospital: Community Health Ctr, Khujner</p>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>&copy; 2025 Village Mittukhedi Digital Initiative. Created with Pride.</p>
+        </div>
+        <a href="#" class="back-to-top">↑</a>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+
+</html>
