@@ -839,6 +839,14 @@ body.lang-hi .lang-en {
   /* Updated Color */
 }
 
+.dangi-highlight {
+  color: #d35400;
+  /* Deep Saffron/Orange */
+  font-weight: 800;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 /* --- Culture --- */
 .culture-showcase {
   display: flex;
@@ -1873,29 +1881,52 @@ footer {
     font-size: 1rem;
   }
 
-  /* Timeline (Vertical line on left) */
+  /* Navbar Header Fix */
+  .logo-text span {
+    font-size: 1rem;
+    /* Smaller title */
+  }
+
+  .logo-text small {
+    font-size: 0.65rem;
+    /* Smaller subtitle */
+  }
+
+  /* Timeline (Mobile Optimization - Ultra Wide) */
   .timeline-container::after {
-    left: 20px;
-    /* Move line to left */
+    left: 5px;
+    /* Stick to left edge */
   }
 
   .timeline-item {
     width: 100%;
-    padding-left: 60px;
-    /* Make space for line */
-    padding-right: 20px;
-    text-align: left;
+    padding-left: 45px;
+    /* Minimum space for icon */
+    padding-right: 0px;
+    /* Full width */
   }
 
-  .timeline-item:nth-child(odd),
   .timeline-item:nth-child(even) {
     left: 0%;
   }
 
   .timeline-item::after {
-    left: -2px !important;
-    /* Fix icon position */
-    right: auto !important;
+    left: -11px !important;
+    /* Center icon on the line (5px left + half width offset) */
+    right: auto;
+  }
+
+  /* Reset even child text alignment */
+  .timeline-item:nth-child(even) .timeline-year,
+  .timeline-item:nth-child(even) .timeline-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  /* Compact Content Box for Mobile */
+  .timeline-content {
+    padding: 15px 15px;
+    /* Reduced padding inside the box */
   }
 
   /* General Layout */
@@ -1934,6 +1965,28 @@ footer {
 
   .section-padding {
     padding: 60px 0;
+  }
+
+  /* Developer Card Mobile */
+  .developer-card {
+    padding: 25px 20px;
+    margin-top: 30px;
+  }
+
+  .developer-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .social-links a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 
   /* Hide desktop specific if any (optional) */
