@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
         particlesJS('particles-js', {
             "particles": {
                 "number": {
-                    "value": 80,
+                    "value": window.innerWidth < 768 ? 30 : 80, // Reduced particles on mobile
+
                     "density": {
                         "enable": true,
                         "value_area": 800
@@ -243,13 +244,74 @@ document.addEventListener('DOMContentLoaded', () => {
                 spaceBetween: 20,
             },
             768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
                 slidesPerView: 3,
                 spaceBetween: 40,
             },
-            1024: {
+            1280: {
                 slidesPerView: 4,
                 spaceBetween: 50,
-            },
+            }
         }
     });
+
+    /* --- Photo Upload Logic --- */
+    const uploadInput = document.getElementById('photoUpload');
+    const STORAGE_KEY = 'mittukhedi_gallery_photos';
+
+    // 1. Load saved photos on startup
+    const savedPhotos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    savedPhotos.forEach(photoData => {
+        addPhotoToGallery(photoData);
+    });
+
+    // 2. Handle new file selection
+    if (uploadInput) {
+        uploadInput.addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function (event) {
+                const photoData = event.target.result; // Base64 string
+
+                // Add to UI
+                addPhotoToGallery(photoData);
+
+                // Save to LocalStorage
+                const currentPhotos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                currentPhotos.push(photoData);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(currentPhotos));
+
+                alert('Photo added successfully! / फोटो सफलतापूर्वक जोड़ दी गई!');
+            };
+
+            reader.readAsDataURL(file);
+        });
+    }
+
+    // Helper to add photo to Grid
+    function addPhotoToGallery(imgSrc) {
+        const grid = document.getElementById('user-upload-grid');
+        if (!grid) return;
+
+        // Create Grid Item
+        const gridItem = document.createElement('div');
+        gridItem.className = 'grid-item';
+        gridItem.innerHTML = `
+            <img src="${imgSrc}" alt="Community Photo">
+        `;
+
+        // Append to Grid (at start)
+        const firstChild = grid.firstChild;
+        if (firstChild) {
+            grid.insertBefore(gridItem, firstChild);
+        } else {
+            grid.appendChild(gridItem);
+        }
+    }
 });

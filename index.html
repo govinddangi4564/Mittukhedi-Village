@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mittukhedi - The Soul of Rural India</title>
+    <title>Gram Panchayat Mittukhedi | Official Website</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- Icons (using simple unicode or reliable CDN if allowed, sticking to unicode/css shapes for pure dependency-free) -->
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="lang-en">
@@ -23,13 +24,17 @@
     <nav class="navbar glass-effect">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="lang-en">Mittukhedi</span>
-                <span class="lang-hi">मिट्टूखेड़ी</span>
+                <div class="logo-text">
+                    <span class="lang-en">Gram Panchayat Mittukhedi</span>
+                    <span class="lang-hi">ग्राम पंचायत मिट्टूखेड़ी</span>
+                    <small>Dist. Rajgarh, Madhya Pradesh (India)</small>
+                </div>
             </a>
             <div class="nav-right">
                 <ul class="nav-links">
                     <li><a href="#about"><span class="lang-en">About</span><span class="lang-hi">परिचय</span></a></li>
-                    <li><a href="#timeline"><span class="lang-en">Timeline</span><span class="lang-hi">समयरेखा</span></a></li>
+                    <li><a href="#timeline"><span class="lang-en">Timeline</span><span
+                                class="lang-hi">समयरेखा</span></a></li>
                     <li><a href="#life"><span class="lang-en">Village Life</span><span class="lang-hi">गाँव का
                                 जीवन</span></a></li>
                     <li><a href="#infra"><span class="lang-en">Development</span><span class="lang-hi">विकास</span></a>
@@ -63,9 +68,10 @@
         <div class="hero-bg"></div>
         <div class="hero-content container">
             <div class="hero-text">
-                <span class="subtitle lang-en">Welcome to</span><span class="subtitle lang-hi">स्वागत है</span>
-                <h1 class="lang-en">Village Mittukhedi</h1>
-                <h1 class="lang-hi">ग्राम मिट्टूखेड़ी</h1>
+                <span class="subtitle lang-en">Official Website of</span><span class="subtitle lang-hi">की आधिकारिक
+                    वेबसाइट</span>
+                <h1 class="lang-en">Gram Panchayat Mittukhedi</h1>
+                <h1 class="lang-hi">ग्राम पंचायत मिट्टूखेड़ी</h1>
                 <p class="lang-en">A timeless journey into the heart of rural Madhya Pradesh. Where tradition meets
                     simplicity, and community equals family.</p>
                 <p class="lang-hi">मध्य प्रदेश के ग्रामीण अंचल की एक कालातीत यात्रा। जहाँ परंपरा सादगी से मिलती है, और
@@ -78,7 +84,26 @@
         </div>
     </header>
 
-    <!-- Administrative Strip (Floating) -->
+    </header>
+
+    <!-- Notice Board (New) -->
+    <section id="notices" class="notice-strip">
+        <div class="container notice-container">
+            <div class="notice-label">
+                <span class="lang-en">📢 Latest Updates:</span>
+                <span class="lang-hi">📢 नवीनतम अपडेट:</span>
+            </div>
+            <div class="notice-marquee">
+                <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                    <span class="img-icon">🆕</span> <a href="#">Aam Sabha scheduled for 15th Aug 2025 in Panchayat
+                        Bhawan.</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="img-icon">💧</span> <a href="#">Water Supply maintenance on Monday.</a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="img-icon">🚜</span> <a href="#">Kisan Credit Card camp next week.</a>
+                </marquee>
+            </div>
+        </div>
+    </section>
     <div class="admin-strip container">
         <div class="admin-grid">
             <div class="admin-item">
@@ -169,7 +194,8 @@
     <section id="timeline" class="section-padding bg-light">
         <div class="container">
             <div class="section-header text-center" data-animation="slide-in-up">
-                <span class="section-tag lang-en">Our Journey</span><span class="section-tag lang-hi">हमारी यात्रा</span>
+                <span class="section-tag lang-en">Our Journey</span><span class="section-tag lang-hi">हमारी
+                    यात्रा</span>
                 <h2 class="lang-en">A Walk Through Time</h2>
                 <h2 class="lang-hi">समय के गलियारों में</h2>
                 <div class="divider"></div>
@@ -180,8 +206,10 @@
                     <div class="timeline-content">
                         <h3 class="lang-en">Foundation of Mittukhedi</h3>
                         <h3 class="lang-hi">मिट्टूखेड़ी की स्थापना</h3>
-                        <p class="lang-en">The first agrarian families settle in the fertile lands of the Malwa plateau, naming the village "Mittukhedi" - the settlement of the soil.</p>
-                        <p class="lang-hi">मालवा पठार की उपजाऊ भूमि पर पहले कृषक परिवार बस गए, जिन्होंने गांव का नाम "मिट्टूखेड़ी" रखा - यानी मिट्टी की बस्ती।</p>
+                        <p class="lang-en">The first agrarian families settle in the fertile lands of the Malwa plateau,
+                            naming the village "Mittukhedi" - the settlement of the soil.</p>
+                        <p class="lang-hi">मालवा पठार की उपजाऊ भूमि पर पहले कृषक परिवार बस गए, जिन्होंने गांव का नाम
+                            "मिट्टूखेड़ी" रखा - यानी मिट्टी की बस्ती।</p>
                     </div>
                 </div>
                 <div class="timeline-item" data-animation="slide-in-up" data-icon="🎓">
@@ -189,8 +217,10 @@
                     <div class="timeline-content">
                         <h3 class="lang-en">First Primary School</h3>
                         <h3 class="lang-hi">प्रथम प्राथमिक विद्यालय</h3>
-                        <p class="lang-en">The village establishes its first formal primary school under a large neem tree, marking a commitment to education for the next generation.</p>
-                        <p class="lang-hi">गाँव ने अपनी अगली पीढ़ी के लिए शिक्षा की प्रतिबद्धता को चिह्नित करते हुए, एक बड़े नीम के पेड़ के नीचे अपना पहला औपचारिक प्राथमिक विद्यालय स्थापित किया।</p>
+                        <p class="lang-en">The village establishes its first formal primary school under a large neem
+                            tree, marking a commitment to education for the next generation.</p>
+                        <p class="lang-hi">गाँव ने अपनी अगली पीढ़ी के लिए शिक्षा की प्रतिबद्धता को चिह्नित करते हुए, एक
+                            बड़े नीम के पेड़ के नीचे अपना पहला औपचारिक प्राथमिक विद्यालय स्थापित किया।</p>
                     </div>
                 </div>
                 <div class="timeline-item" data-animation="slide-in-up" data-icon="💡">
@@ -198,8 +228,10 @@
                     <div class="timeline-content">
                         <h3 class="lang-en">Arrival of Electricity</h3>
                         <h3 class="lang-hi">बिजली का आगमन</h3>
-                        <p class="lang-en">The first electric poles are erected, bringing light to homes and paving the way for modern agricultural pumps, transforming farming.</p>
-                        <p class="lang-hi">पहले बिजली के खंभे लगाए गए, जिससे घरों में रोशनी आई और आधुनिक कृषि पंपों का मार्ग प्रशस्त हुआ, जिसने खेती को बदल दिया।</p>
+                        <p class="lang-en">The first electric poles are erected, bringing light to homes and paving the
+                            way for modern agricultural pumps, transforming farming.</p>
+                        <p class="lang-hi">पहले बिजली के खंभे लगाए गए, जिससे घरों में रोशनी आई और आधुनिक कृषि पंपों का
+                            मार्ग प्रशस्त हुआ, जिसने खेती को बदल दिया।</p>
                     </div>
                 </div>
                 <div class="timeline-item" data-animation="slide-in-up" data-icon="🕉️">
@@ -207,8 +239,10 @@
                     <div class="timeline-content">
                         <h3 class="lang-en">Ram Mandir Construction</h3>
                         <h3 class="lang-hi">राम मंदिर का निर्माण</h3>
-                        <p class="lang-en">The community comes together to build the grand Ram Mandir, which becomes the spiritual and cultural heart of the village.</p>
-                        <p class="lang-hi">समुदाय ने भव्य राम मंदिर का निर्माण करने के लिए हाथ मिलाया, जो गाँव का आध्यात्मिक और सांस्कृतिक केंद्र बन गया।</p>
+                        <p class="lang-en">The community comes together to build the grand Ram Mandir, which becomes the
+                            spiritual and cultural heart of the village.</p>
+                        <p class="lang-hi">समुदाय ने भव्य राम मंदिर का निर्माण करने के लिए हाथ मिलाया, जो गाँव का
+                            आध्यात्मिक और सांस्कृतिक केंद्र बन गया।</p>
                     </div>
                 </div>
                 <div class="timeline-item" data-animation="slide-in-up" data-icon="🛣️">
@@ -216,8 +250,10 @@
                     <div class="timeline-content">
                         <h3 class="lang-en">PMGSY Road Connectivity</h3>
                         <h3 class="lang-hi">PMGSY सड़क संपर्क</h3>
-                        <p class="lang-en">The village gets connected to the main tehsil road via a paved road under the Pradhan Mantri Gram Sadak Yojana, improving accessibility.</p>
-                        <p class="lang-hi">प्रधानमंत्री ग्राम सड़क योजना के तहत गांव को पक्की सड़क के माध्यम से मुख्य तहसील सड़क से जोड़ा गया, जिससे पहुंच में सुधार हुआ।</p>
+                        <p class="lang-en">The village gets connected to the main tehsil road via a paved road under the
+                            Pradhan Mantri Gram Sadak Yojana, improving accessibility.</p>
+                        <p class="lang-hi">प्रधानमंत्री ग्राम सड़क योजना के तहत गांव को पक्की सड़क के माध्यम से मुख्य
+                            तहसील सड़क से जोड़ा गया, जिससे पहुंच में सुधार हुआ।</p>
                     </div>
                 </div>
             </div>
@@ -784,6 +820,9 @@
                 <h2 class="lang-hi">फोटो गैलरी</h2>
                 <div class="divider"></div>
             </div>
+
+            <!-- Upload Controls Removed (Moved to Community Section) -->
+
             <div class="swiper-container gallery-slider" data-animation="zoom-in">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -840,7 +879,40 @@
             </div>
         </div>
     </section>
-    <!-- Developer Section -->
+
+    <!-- Community Grid Gallery (New) -->
+    <section id="community-gallery" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag lang-en">Community</span><span class="section-tag lang-hi">समुदाय</span>
+                <h2 class="lang-en">Community Gallery</h2>
+                <h2 class="lang-hi">सामुदायिक गैलरी</h2>
+                <p class="lang-en" style="max-width: 600px; margin: 10px auto;">Photos contributed by the villagers and
+                    visitors. Share your moments with us.</p>
+                <p class="lang-hi" style="max-width: 600px; margin: 10px auto;">ग्रामीणों और आगंतुकों द्वारा योगदान की
+                    गई तस्वीरें। अपने पल हमारे साथ साझा करें।</p>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Upload Controls (Moved Here) -->
+            <div class="upload-container text-center" style="margin-bottom: 40px;">
+                <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+                <button class="btn-primary" onclick="document.getElementById('photoUpload').click()">
+                    <span class="icon">📷</span> <span class="lang-en">Contribute Photo</span><span class="lang-hi">फोटो
+                        योगदान करें</span>
+                </button>
+                <p class="small lang-en" style="margin-top:10px; opacity:0.7;">(Uploaded photos are instantly added
+                    below)</p>
+                <p class="small lang-hi" style="margin-top:10px; opacity:0.7;">(अपलोड की गई तस्वीरें तुरंत नीचे जुड़
+                    जाती हैं)</p>
+            </div>
+
+            <!-- Grid Container -->
+            <div id="user-upload-grid" class="gallery-grid">
+                <!-- User photos will appear here -->
+            </div>
+        </div>
+    </section>
     <section id="developer" class="section-padding bg-warm">
         <div class="container text-center">
             <span class="section-tag lang-en" data-animation="slide-in-up">The Architect</span><span
@@ -864,61 +936,64 @@
         </div>
     </section>
 
-    <!-- Footer (Expanded) -->
+    <!-- Footer (Official) -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3 class="lang-en">Village Mittukhedi</h3>
-                <h3 class="lang-hi">ग्राम मिट्टूखेड़ी</h3>
-                <p>Pin Code: 465683 (approx region)</p>
-                <p>Post: Chatukheda</p>
-                <p>Panchayat: Rampuriya</p>
-                <p>Tehsil: Khujner</p>
-                <p>Dist: Rajgarh, M.P.</p>
-            </div>
-            <div class="footer-col">
-                <h3 class="lang-en">Quick Links</h3>
-                <h3 class="lang-hi">त्वरित लिंक</h3>
-                <a href="#about"><span class="lang-en">About</span><span class="lang-hi">परिचय</span></a>
-                <a href="#infra"><span class="lang-en">Development</span><span class="lang-hi">विकास</span></a>
-                <a href="#governance"><span class="lang-en">Panchayat</span><span class="lang-hi">पंचायत</span></a>
-            </div>
-            <div class="footer-col">
-                <h3 class="lang-en">Useful Links</h3>
-                <h3 class="lang-hi">उपयोगी लिंक</h3>
-                <ul>
-                    <li><a href="https://rajgarh.nic.in/" target="_blank">District Rajgarh Official</a></li>
-                    <li><a href="https://mp.gov.in/" target="_blank">MP Govt Portal</a></li>
-                    <li><a href="https://pmaymis.gov.in/" target="_blank">PM Awas Yojana</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3 class="lang-en">Follow Us</h3>
-                <h3 class="lang-hi">हमें फॉलो करें</h3>
-                <div class="social-links-footer">
-                    <a href="#" target="_blank">Facebook</a>
-                    <a href="#" target="_blank">Instagram</a>
-                    <a href="#" target="_blank">YouTube</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="lang-en">Gram Panchayat Mittukhedi</h3>
+                    <h3 class="lang-hi">ग्राम पंचायत मिट्टूखेड़ी</h3>
+                    <p class="lang-en">Working towards a Digital and Self-Reliant Village. Dedicated to the service of
+                        every citizen.</p>
+                    <p class="lang-hi">डिजिटल और आत्मनिर्भर गाँव की ओर अग्रसर। प्रत्येक नागरिक की सेवा में समर्पित।</p>
+                    <br>
+                    <p><strong>District:</strong> Rajgarh (M.P.)</p>
+                </div>
+                <!-- Contact & Emergency -->
+                <div class="footer-col">
+                    <h3 class="lang-en">Contact & Emergency</h3>
+                    <h3 class="lang-hi">संपर्क और आपातकालीन</h3>
+                    <p><strong>Panchayat Bhawan:</strong> +91-7372-XXXXXX</p>
+                    <p><strong>Sarpanch:</strong> +91-98765-XXXXX</p>
+                    <p><strong>Police (Dial 100):</strong> 100</p>
+                    <p><strong>Ambulance:</strong> 108</p>
+                    <p><strong>Child Helpline:</strong> 1098</p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="lang-en">Quick Links</h3>
+                    <h3 class="lang-hi">महत्वपूर्ण लिंक</h3>
+                    <a href="https://panchayat.gov.in/" target="_blank">E-Gram Swaraj</a>
+                    <a href="https://mp.gov.in/" target="_blank">MP Govt Portal</a>
+                    <a href="https://cmhelpline.mp.gov.in/" target="_blank">CM Helpline (181)</a>
+                    <a href="#">Village Map</a>
+                    <a href="#">Voter List</a>
+                </div>
+                <div class="footer-col">
+                    <h3 class="lang-en">Connect</h3>
+                    <h3 class="lang-hi">जुड़ें</h3>
+                    <div class="social-links-footer">
+                        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://wa.me/917067624664"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-col">
-                <h3 class="lang-en">Contact/Emergency</h3>
-                <h3 class="lang-hi">संपर्क/आपातकालीन</h3>
-                <p>Sarpanch Office: Rampuriya</p>
-                <p>Police Station: Khujner</p>
-                <p>Hospital: Community Health Ctr, Khujner</p>
+            <div class="copyright text-center">
+                <p>&copy; 2024 Gram Panchayat Mittukhedi. All Rights Reserved. | <a href="#"
+                        style="color:white;">Disclaimer</a> | <a href="#" style="color:white;">Privacy Policy</a></p>
+                <p class="small" style="margin-top:5px; opacity:0.7;">Developed by Govind Dangi</p>
             </div>
-        </div>
-        <div class="copyright text-center">
-            <p>&copy; 2025 Village Mittukhedi Digital Initiative. Created with Pride.</p>
         </div>
         <a href="#" class="back-to-top">↑</a>
     </footer>
 
-    <!-- Image Modal -->
+    <!-- Image Modal (Lightbox) -->
     <div id="imageModal" class="modal">
         <span class="close-modal">&times;</span>
+        <a class="prev-modal" onclick="changeSlide(-1)">&#10094;</a>
         <img class="modal-content" id="modalImage">
+        <a class="next-modal" onclick="changeSlide(1)">&#10095;</a>
         <div id="caption"></div>
     </div>
 
