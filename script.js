@@ -222,41 +222,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Swiper Slider ---
-    var swiper = new Swiper('.gallery-slider', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
+    // --- Swiper Slider ---
+    try {
+        if (typeof Swiper !== 'undefined') {
+            console.log('Swiper is defined, initializing...');
+            var swiper = new Swiper('.gallery-slider', {
+                slidesPerView: 1,
                 spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-            1280: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-            }
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1280: {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    }
+                }
+            });
+            console.log('Swiper initialized:', swiper);
+        } else {
+            console.error('Swiper is NOT defined. CDN might be blocked or failed to load.');
+            alert('Error: Image Slider library (Swiper) failed to load. Check internet connection.');
         }
-    });
+    } catch (err) {
+        console.error('Swiper initialization failed:', err);
+    }
 
     /* --- Photo Upload Logic --- */
     const uploadInput = document.getElementById('photoUpload');
