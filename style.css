@@ -1129,6 +1129,57 @@ body.lang-hi .lang-en {
 
 /* Media Queries for Timeline */
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+    /* Reduce base font size */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem !important;
+    /* Override clamp for mobile */
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .logo-text span {
+    font-size: 1.1rem;
+  }
+
+  .section-tag {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+  }
+
+  /* Performance: Disable Backdrop Filter on Mobile */
+  .navbar {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.98);
+    /* Solid background */
+  }
+
+  /* Performance: Reduce Shadows */
+  .feature-card,
+  .service-block,
+  .timeline-content,
+  .grid-item {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Lighter shadow */
+  }
+
   .timeline-container::after {
     left: 22px;
   }

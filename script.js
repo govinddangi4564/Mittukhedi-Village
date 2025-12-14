@@ -111,12 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
         animatedElementsObserver.observe(element);
     });
 
-    // --- Particles.js ---
-    if (document.getElementById('particles-js')) {
+    // --- Particles.js (Desktop Only) ---
+    if (document.getElementById('particles-js') && window.innerWidth >= 768) {
         particlesJS('particles-js', {
             "particles": {
                 "number": {
-                    "value": window.innerWidth < 768 ? 30 : 80, // Reduced particles on mobile
+                    "value": 60, // Moderate count for desktop
 
                     "density": {
                         "enable": true,
