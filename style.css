@@ -359,6 +359,21 @@ body.lang-hi .lang-en {
   color: var(--primary-dark);
 }
 
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .notice-marquee a {
   color: var(--primary-dark);
   text-decoration: none;

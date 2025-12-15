@@ -64,7 +64,7 @@
 
     <!-- Hero Section -->
     <header class="hero">
-        <div id="particles-js"></div>
+
         <div class="hero-bg"></div>
         <div class="hero-content container">
             <div class="hero-text">
@@ -97,13 +97,18 @@
                 <span class="lang-hi">📢 नवीनतम अपडेट:</span>
             </div>
             <div class="notice-marquee">
-                <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                <div class="marquee-content">
                     <span class="img-icon">🆕</span> <a href="#">Aam Sabha scheduled for 15th Aug 2025 in Panchayat
                         Bhawan.</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <span class="img-icon">💧</span> <a href="#">Water Supply maintenance on Monday.</a>
                     &nbsp;&nbsp;|&nbsp;&nbsp;
                     <span class="img-icon">🚜</span> <a href="#">Kisan Credit Card camp next week.</a>
-                </marquee>
+                    <span class="img-icon">🆕</span> <a href="#">Aam Sabha scheduled for 15th Aug 2025 in Panchayat
+                        Bhawan.</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="img-icon">💧</span> <a href="#">Water Supply maintenance on Monday.</a>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span class="img-icon">🚜</span> <a href="#">Kisan Credit Card camp next week.</a>
+                </div>
             </div>
         </div>
     </section>
@@ -190,7 +195,7 @@
                 </p>
             </div>
             <div class="content-image-wrapper" data-animation="slide-in-right">
-                <img src="images/Layout.png" alt="Village Temple" class="rounded-shadow">
+                <img loading="lazy" src="images/Layout.png" alt="Village Temple" class="rounded-shadow">
                 <div class="image-caption lang-en">The spiritual heart of our village.</div>
                 <div class="image-caption lang-hi">हमारे गाँव का आध्यात्मिक केंद्र।</div>
             </div>
@@ -382,7 +387,7 @@
                 </div>
                 <div class="content-image-wrapper" data-animation="slide-in-left">
                     <!-- Using Fields image to represent work -->
-                    <img src="images/Navratri.jpg" alt="Village Life" class="rounded-shadow">
+                    <img loading="lazy" src="images/Navratri.jpg" alt="Village Life" class="rounded-shadow">
                 </div>
             </div>
         </div>
@@ -450,7 +455,7 @@
                 </ul>
             </div>
             <div class="content-image-wrapper" data-animation="slide-in-left">
-                <img src="images/Road.png" alt="Infrastructure" class="rounded-shadow">
+                <img loading="lazy" src="images/Road.png" alt="Infrastructure" class="rounded-shadow">
             </div>
         </div>
     </section>
@@ -587,7 +592,7 @@
                 </div>
                 <div class="gallery-preview" data-animation="slide-in-right">
                     <!-- Using the Fields image as placeholder for culture/land vibe -->
-                    <img src="images/Divali.jpg" alt="Culture" class="rounded-shadow">
+                    <img loading="lazy" src="images/Divali.jpg" alt="Culture" class="rounded-shadow">
                 </div>
             </div>
         </div>
@@ -665,7 +670,7 @@
                     </p>
                 </div>
                 <div class="content-image-wrapper" data-animation="slide-in-right">
-                    <img src="images/Ram Mandir.jpg" alt="Ram and Hanuman Mandir" class="rounded-shadow hover-zoom">
+                    <img loading="lazy" src="images/Ram Mandir.jpg" alt="Ram and Hanuman Mandir" class="rounded-shadow hover-zoom">
                 </div>
             </div>
         </div>
@@ -684,7 +689,7 @@
             <div class="masonry-grid" data-stagger-children="true">
                 <!-- Item 1: Tractors -->
                 <div class="masonry-item" data-animation="zoom-in">
-                    <img src="images/Khet.png" alt="Tractor in Khet">
+                    <img loading="lazy" src="images/Khet.png" alt="Tractor in Khet">
                     <div class="masonry-content">
                         <h4 class="lang-en">Modern Khet (Farming)</h4>
                         <h4 class="lang-hi">आधुनिक खेती</h4>
@@ -699,7 +704,7 @@
 
                 <!-- Item 2: Buffaloes -->
                 <div class="masonry-item" data-animation="zoom-in">
-                    <img src="images/Buffalo and river.png" alt="Buffaloes and River">
+                    <img loading="lazy" src="images/Buffalo and river.png" alt="Buffaloes and River">
                     <div class="masonry-content">
                         <h4 class="lang-en">Livestock & River</h4>
                         <h4 class="lang-hi">पशुधन और नदी</h4>
@@ -713,7 +718,7 @@
                 <!-- Item 3: School & Ground -->
                 <div class="masonry-item" data-animation="zoom-in">
                     <!-- Reusing School Image or similar -->
-                    <img src="images/School.png" alt="School and Play Ground">
+                    <img loading="lazy" src="images/School.png" alt="School and Play Ground">
                     <div class="masonry-content">
                         <h4 class="lang-en">School & Playground</h4>
                         <h4 class="lang-hi">स्कूल और खेल का मैदान</h4>
@@ -731,7 +736,7 @@
     <section id="festivals" class="section-padding bg-warm">
         <div class="container layout-grid">
             <div class="content-image-wrapper" data-animation="slide-in-left">
-                <img src="images/Mariage.jpg" alt="Diwali and Marriage" class="rounded-shadow hover-zoom">
+                <img loading="lazy" src="images/Mariage.jpg" alt="Diwali and Marriage" class="rounded-shadow hover-zoom">
             </div>
             <div class="content-text" data-animation="slide-in-right">
                 <span class="section-tag lang-en">Celebration</span><span class="section-tag lang-hi">उत्सव</span>
@@ -816,7 +821,7 @@
                     <div class="map-container">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58405.79645531392!2d76.5623281486328!3d23.89249969999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396494134bffffff%3A0xe542d96c39c2fc71!2sKhujner%2C%20Madhya%20Pradesh%20465687!5e0!3m2!1sen!2sin!4v1678886937389!5m2!1sen!2sin"
-                            style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;" allowfullscreen=""
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="image-caption lang-en">Map showing the region around Mittukhedi.</div>
@@ -826,6 +831,7 @@
         </div>
     </section>
 
+    <!-- For optimal performance, please compress all images in the 'images' folder using a tool like TinyPNG. -->
     <!-- Photo Gallery Section -->
     <section id="photo-gallery" class="section-padding">
         <div class="container">
@@ -841,49 +847,49 @@
             <div class="swiper gallery-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/Divali.jpg" alt="Diwali celebrations in Mittukhedi">
+                        <img loading="lazy" src="images/Divali.jpg" alt="Diwali celebrations in Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Hanuman Mandir.jpg" alt="Hanuman Mandir in Mittukhedi">
+                        <img loading="lazy" src="images/Hanuman Mandir.jpg" alt="Hanuman Mandir in Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Mariage.jpg" alt="A wedding ceremony in Mittukhedi">
+                        <img loading="lazy" src="images/Mariage.jpg" alt="A wedding ceremony in Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Navratri.jpg" alt="Navratri celebrations in Mittukhedi">
+                        <img loading="lazy" src="images/Navratri.jpg" alt="Navratri celebrations in Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Photo gallery 3.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Photo gallery 3.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Photo gallery 4.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Photo gallery 4.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Photo gallery 6.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Photo gallery 6.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Photo gallery 7.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Photo gallery 7.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Phtot gallery 1.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Phtot gallery 1.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Phtoto gallery 2.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Phtoto gallery 2.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Phtoto gallery 5.jpg" alt="A photo from the gallery">
+                        <img loading="lazy" src="images/Phtoto gallery 5.jpg" alt="A photo from the gallery">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Ram Mandir.jpg" alt="Ram Mandir in Mittukhedi">
+                        <img loading="lazy" src="images/Ram Mandir.jpg" alt="Ram Mandir in Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Photo gallery 8.jpg" alt="Diwali celebrations in Mittukhedi">
+                        <img loading="lazy" src="images/Photo gallery 8.jpg" alt="Diwali celebrations in Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Tractor.jpg" alt="A tractor in the fields of Mittukhedi">
+                        <img loading="lazy" src="images/Tractor.jpg" alt="A tractor in the fields of Mittukhedi">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/Photo gallery 9.jpg" alt="Diwali celebrations in Mittukhedi">
+                        <img loading="lazy" src="images/Photo gallery 9.jpg" alt="Diwali celebrations in Mittukhedi">
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -935,7 +941,7 @@
             <h2 class="lang-en" data-animation="slide-in-up">Meet the Developer</h2>
             <h2 class="lang-hi" data-animation="slide-in-up">डेवलपर से मिलें</h2>
             <div class="developer-card" data-animation="zoom-in">
-                <img src="images/Developer.png" alt="Developer Photo" class="developer-photo">
+                <img loading="lazy" src="images/Developer.png" alt="Developer Photo" class="developer-photo">
                 <div class="developer-info">
                     <h3 class="developer-name">Govind Dangi</h3>
                     <p class="developer-bio">A passionate developer with roots in Mittukhedi, currently honing skills in
@@ -1018,7 +1024,7 @@
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script src="script.js"></script>
 </body>
 
