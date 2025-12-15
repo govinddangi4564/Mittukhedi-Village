@@ -162,15 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Swiper initialization failed:', err);
     }
 
-    /* --- Photo Upload Logic --- */
+    /* --- Photo Upload Logic (Temporary - Session Only) --- */
     const uploadInput = document.getElementById('photoUpload');
-    const STORAGE_KEY = 'mittukhedi_gallery_photos';
-
-    // 1. Load saved photos on startup
-    const savedPhotos = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    savedPhotos.forEach(photoData => {
-        addPhotoToGallery(photoData);
-    });
 
     // Handle new file selection
     if (uploadInput) {
@@ -178,9 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const file = e.target.files[0];
             if (!file) return;
 
-            // Create a temporary URL for the image.
-            // This is much more memory-efficient than using readAsDataURL() and storing the base64 string in localStorage.
-            // Note: The URL is temporary and will be released when the document is unloaded.
+            // Validate file type
+            if (!file.type.startsWith('image/')) {
+                alert('Please upload an image file (JPG, PNG).');
+                return;
+            }
+
+            // Create a temporary URL for the image (Session Only)
             const photoURL = URL.createObjectURL(file);
 
             // Add to UI
@@ -188,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Helper to add photo to Grid
+    // Helper: Add photo to Grid DOM
     function addPhotoToGallery(imgSrc) {
         const grid = document.getElementById('user-upload-grid');
         if (!grid) return;
@@ -196,6 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create Grid Item
         const gridItem = document.createElement('div');
         gridItem.className = 'grid-item';
+        // Add a fade-in animation
+        gridItem.style.animation = 'zoom-in 0.5s ease-out';
+
         gridItem.innerHTML = `
             <img src="${imgSrc}" alt="Community Photo">
         `;
@@ -208,4 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.appendChild(gridItem);
         }
     }
+
+
 });
