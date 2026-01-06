@@ -3,19 +3,85 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Language Toggle Logic ---
     const langToggleBtn = document.getElementById('lang-toggle');
     const body = document.body;
-    let currentLang = 'en'; // Default language
 
-    langToggleBtn.addEventListener('click', () => {
-        if (currentLang === 'en') {
-            body.classList.remove('lang-en');
-            body.classList.add('lang-hi');
-            currentLang = 'hi';
-        } else {
-            body.classList.remove('lang-hi');
-            body.classList.add('lang-en');
-            currentLang = 'en';
+    // Determine current language from localStorage or body class (default to Hindi)
+    let currentLang = localStorage.getItem('siteLang') || (body.classList.contains('lang-hi') ? 'hi' : 'en');
+
+    // Ensure valid lang if stored value is weird
+    if (!['en', 'hi', 'mv'].includes(currentLang)) {
+        currentLang = 'hi';
+    }
+
+    // Simple translations for runtime alerts/messages
+    const translations = {
+        upload_invalid: {
+            en: 'Please upload an image file (JPG, PNG).',
+            hi: 'कृपया एक छवि फ़ाइल (JPG, PNG) अपलोड करें।',
+            mv: 'कृपया फोटो फाइल (JPG, PNG) डालो।'
+        },
+        swiper_fail: {
+            en: 'Error: Image Slider library (Swiper) failed to load. Check internet connection.',
+            hi: 'त्रुटि: इमेज स्लाइडर लाइब्रेरी (Swiper) लोड नहीं हुई। इंटरनेट कनेक्शन जाँचें।',
+            mv: 'गड़बड़ी: फोटो स्लाइडर (Swiper) चालू नी हो रियो। नेट देख लो।'
         }
-    });
+    };
+
+    function setLanguage(lang) {
+        // Reset all classes
+        body.classList.remove('lang-en', 'lang-hi', 'lang-mv');
+
+        // Add new class and update state
+        body.classList.add(`lang-${lang}`);
+        currentLang = lang;
+
+        // Persist preference
+        try {
+            localStorage.setItem('siteLang', currentLang);
+        } catch (e) {
+            // ignore
+        }
+        // Update HTML lang attribute for accessibility
+        try {
+            document.documentElement.lang = currentLang;
+        } catch (e) { }
+
+        // Update toggle aria label and button text based on NEXT language in cycle
+        // Update toggle aria label based on NEXT language in cycle for accessibility
+        if (langToggleBtn) {
+            let nextLangLabel = '';
+            let currentLangLabel = '';
+
+            if (lang === 'en') {
+                currentLangLabel = 'English';
+                nextLangLabel = 'Hindi';
+            } else if (lang === 'hi') {
+                currentLangLabel = 'Hindi';
+                nextLangLabel = 'Malvi';
+            } else { // mv
+                currentLangLabel = 'Malvi';
+                nextLangLabel = 'English';
+            }
+
+            // Aria-label should inform screen reader of current state and what action does
+            langToggleBtn.setAttribute('aria-label', `Current language: ${currentLangLabel}. Click to switch to ${nextLangLabel}`);
+        }
+    }
+
+    // Ensure default language is applied
+    setLanguage(currentLang);
+
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            // Cycle: en -> hi -> mv -> en
+            if (currentLang === 'en') {
+                setLanguage('hi');
+            } else if (currentLang === 'hi') {
+                setLanguage('mv');
+            } else {
+                setLanguage('en');
+            }
+        });
+    }
 
     // --- Mobile Menu Logic ---
     const hamburger = document.querySelector('.hamburger');
@@ -156,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Swiper initialized:', swiper);
         } else {
             console.error('Swiper is NOT defined. CDN might be blocked or failed to load.');
-            alert('Error: Image Slider library (Swiper) failed to load. Check internet connection.');
+            alert(translations.swiper_fail[currentLang] || 'Image slider failed to load.');
         }
     } catch (err) {
         console.error('Swiper initialization failed:', err);
@@ -173,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Validate file type
             if (!file.type.startsWith('image/')) {
-                alert('Please upload an image file (JPG, PNG).');
+                alert(translations.upload_invalid[currentLang] || 'Please upload an image file.');
                 return;
             }
 

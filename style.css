@@ -47,7 +47,29 @@ body {
   overflow-x: hidden;
 }
 
-/* Hindi Font Override */
+/* Skip link (accessible) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  z-index: 1200;
+}
+
+/* Hindi & Malvi Font Override */
 body.lang-hi,
 body.lang-hi h1,
 body.lang-hi h2,
@@ -55,7 +77,15 @@ body.lang-hi h3,
 body.lang-hi span,
 body.lang-hi p,
 body.lang-hi a,
-body.lang-hi button {
+body.lang-hi button,
+body.lang-mv,
+body.lang-mv h1,
+body.lang-mv h2,
+body.lang-mv h3,
+body.lang-mv span,
+body.lang-mv p,
+body.lang-mv a,
+body.lang-mv button {
   font-family: "Noto Sans Devanagari", sans-serif;
 }
 
@@ -90,11 +120,18 @@ img {
 }
 
 /* --- Language Toggle Utilities --- */
-body.lang-en .lang-hi {
+body.lang-en .lang-hi,
+body.lang-en .lang-mv {
   display: none !important;
 }
 
-body.lang-hi .lang-en {
+body.lang-hi .lang-en,
+body.lang-hi .lang-mv {
+  display: none !important;
+}
+
+body.lang-mv .lang-en,
+body.lang-mv .lang-hi {
   display: none !important;
 }
 
@@ -142,7 +179,7 @@ body.lang-hi .lang-en {
   font-size: 1.3rem;
   /* Official standard size */
   color: var(--primary-dark);
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .logo-text small {
@@ -152,7 +189,6 @@ body.lang-hi .lang-en {
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-
 
 /* --- Community Gallery Grid --- */
 
@@ -235,7 +271,6 @@ body.lang-hi .lang-en {
 .next-modal:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 .gallery-grid .grid-item:hover {
   transform: translateY(-5px);
@@ -791,9 +826,7 @@ body.lang-hi .lang-en {
 
 /* --- Nature Section --- */
 .bg-green-gradient {
-  background: linear-gradient(135deg,
-      #2980b9 0%,
-      #3498db 100%);
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
   /* New Gradient */
   color: white;
 }
@@ -1002,12 +1035,15 @@ body.lang-hi .lang-en {
 }
 
 .timeline-container::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   /* Thicker line */
   /* Gradient line */
-  background: linear-gradient(to bottom, var(--accent-color), var(--primary-color), var(--secondary-color));
+  background: linear-gradient(to bottom,
+      var(--accent-color),
+      var(--primary-color),
+      var(--secondary-color));
   top: 10px;
   bottom: 10px;
   left: 50%;
@@ -1029,7 +1065,6 @@ body.lang-hi .lang-en {
   transform: scale(1.03);
   /* Hover effect */
 }
-
 
 /* The icon circle on the timeline */
 .timeline-item::after {
@@ -1059,7 +1094,6 @@ body.lang-hi .lang-en {
   /* Fun rotate on hover */
 }
 
-
 /* Place the item to the left */
 .timeline-item:nth-child(odd) {
   left: 0;
@@ -1080,7 +1114,6 @@ body.lang-hi .lang-en {
   display: none;
 }
 
-
 /* Fix the circle for right-sided items */
 .timeline-item:nth-child(even)::after {
   left: -22px;
@@ -1099,28 +1132,26 @@ body.lang-hi .lang-en {
 }
 
 /* Alternate border colors */
-.timeline-item:nth-child(4n+1)>.timeline-content {
+.timeline-item:nth-child(4n + 1)>.timeline-content {
   border-color: var(--primary-color);
 }
 
-.timeline-item:nth-child(4n+2)>.timeline-content {
+.timeline-item:nth-child(4n + 2)>.timeline-content {
   border-color: var(--secondary-color);
 }
 
-.timeline-item:nth-child(4n+3)>.timeline-content {
+.timeline-item:nth-child(4n + 3)>.timeline-content {
   border-color: var(--primary-green);
 }
 
-.timeline-item:nth-child(4n+4)>.timeline-content {
+.timeline-item:nth-child(4n + 4)>.timeline-content {
   border-color: var(--harvest-gold);
 }
-
 
 .timeline-item:nth-child(odd)>.timeline-content {
   border-right: 5px solid;
   border-left: none;
 }
-
 
 .timeline-content h3 {
   margin-bottom: 10px;
@@ -1136,7 +1167,7 @@ body.lang-hi .lang-en {
   color: var(--text-light);
   /* Lighter year color */
   margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Media Queries for Timeline */
@@ -1773,9 +1804,8 @@ footer {
   font-weight: 800;
   color: var(--primary-color);
   margin-bottom: 15px;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
-
 
 /* --- Media Queries (Mobile Optimization) --- */
 @media screen and (max-width: 1024px) {
@@ -1880,7 +1910,6 @@ footer {
     transition-delay: 0.6s;
   }
 
-
   .hamburger {
     display: block;
     cursor: pointer;
@@ -1917,7 +1946,6 @@ footer {
     transform: rotate(45deg) translate(-6px, -7px);
     background-color: var(--primary-dark);
   }
-
 
   /* Admin Strip (Stacked Grid) */
   .admin-strip {
