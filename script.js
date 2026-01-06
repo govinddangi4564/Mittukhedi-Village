@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Language Toggle Logic ---
     const langToggleBtn = document.getElementById('lang-toggle');
     const body = document.body;
-    let currentLang = 'en'; // Default language
+    let currentLang = 'hi'; // Default language
 
     langToggleBtn.addEventListener('click', () => {
         if (currentLang === 'en') {
