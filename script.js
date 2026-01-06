@@ -3,19 +3,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Language Toggle Logic ---
     const langToggleBtn = document.getElementById('lang-toggle');
     const body = document.body;
-    let currentLang = 'hi'; // Default language
+
+    // Check local storage for saved language or default to 'hi'
+    let currentLang = localStorage.getItem('site_lang') || 'hi';
+
+    // Apply initial language state
+    body.classList.remove('lang-en', 'lang-hi', 'lang-mv');
+    body.classList.add(`lang-${currentLang}`);
 
     langToggleBtn.addEventListener('click', () => {
+        // Cycle: en -> hi -> mv -> en
         if (currentLang === 'en') {
-            body.classList.remove('lang-en');
-            body.classList.add('lang-hi');
             currentLang = 'hi';
+        } else if (currentLang === 'hi') {
+            currentLang = 'mv';
         } else {
-            body.classList.remove('lang-hi');
-            body.classList.add('lang-en');
             currentLang = 'en';
         }
+
+        // Remove all language classes and add the new one
+        body.classList.remove('lang-en', 'lang-hi', 'lang-mv');
+        body.classList.add(`lang-${currentLang}`);
+
+        // Save preference
+        localStorage.setItem('site_lang', currentLang);
+
+        // Update aria-label for accessibility (optional but recommended)
+        updateLangButtonLabel(currentLang);
     });
+
+    function updateLangButtonLabel(lang) {
+        let label = '';
+        if (lang === 'en') label = 'Switch to Hindi';
+        else if (lang === 'hi') label = 'Switch to Malvi';
+        else label = 'Switch to English'; // mv
+        langToggleBtn.setAttribute('aria-label', label);
+    }
+
+    // Initial label set
+    updateLangButtonLabel(currentLang);
 
     // --- Mobile Menu Logic ---
     const hamburger = document.querySelector('.hamburger');
